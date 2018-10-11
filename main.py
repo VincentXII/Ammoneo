@@ -5,10 +5,10 @@ def ammoneo():
 		main = input("> ")
 
 		if main == "R":
-			read = input("What List would you like to Read?: ")	
-			with open(read) as r:
-				reader = csv.reader(r)
-				for row in reader:
-					print(row)
+			read = input("What List Would You Like To Read? ")
+			f = open(read)
+			reader = csv.reader(f)
+			for row in reader:
+				print(row)
 
 ammoneo()
