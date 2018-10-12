@@ -1,2 +1,2 @@
 # Ammoneo
-A reminder list creator
+A to-do list reader and creator
