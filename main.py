@@ -8,26 +8,19 @@ def ammoneo():
 
 		if main == "R":
 			read = input("What List Would You Like To Read? ")
-			f = open(read)
+			read = read + ".vtdl"
+			f = open(read, 'r')
 			reader = csv.reader(f)
 			for row in reader:
 				print (','.join(row))
 
 		if main == "N":
 			new = input("Name of New List: ")
+			new = new + ".vtdl"
 			firstremind = input("First Reminder: ")
-			with open(new, 'wb') as csvfile:
+			with open(new, 'w') as csvfile:
 				filewriter = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
 				filewriter.writerow([firstremind])
-			#write = input("Name of New List: ")
-			#ifile  = open(write, "rb")
-			#reader = csv.reader(write)
-			#ofile  = open(write, "wb")
-			#writer = csv.writer(ofile, quotechar='"', quoting=csv.QUOTE_ALL)
-			#for row in reader:
-			#	writer.writerow(row)
-			#	ifile.close()
-			#	ofile.close()
 
 
 		if main == "X":
